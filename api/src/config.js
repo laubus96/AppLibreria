@@ -3,7 +3,7 @@ dotenv.config();
 
 export default {
   MONGO_DATABASE: "biblioteca-databse",
-  MONGO_HOTS: "mongo",
+  MONGO_HOTS: "localhost",
   MONGO_USER: "lau",
   MONGO_PASSWORD: "123",
   PORT: process.env.PORT,
