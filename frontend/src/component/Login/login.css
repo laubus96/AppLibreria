@@ -1,0 +1,42 @@
+.campos {
+  padding: 1.5rem !important;
+  font-size: 1rem !important;
+  display: flex;
+  align-items: center;
+}
+
+.largo {
+  max-width: 400px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+.title {
+  font-size: 1.5rem;
+}
+.form {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 4rem;
+  font-family: "Roboto", sans-serif;
+}
+
+span {
+  padding-right: 1rem;
+}
+.boton {
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.preguntas {
+  padding: 1rem;
+  font-size: 0.7rem;
+  color: gray;
+}
+.preguntas a {
+  color: black;
+}
+.preguntas a:hover {
+  color: rgb(0, 0, 255);
+}
