@@ -23,10 +23,12 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-load": "^1.1.16",
+    "googleapis": "^71.0.0",
     "helmet": "^4.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.13",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.5.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.0",

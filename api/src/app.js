@@ -4,6 +4,7 @@ import config from "./config";
 import bookRouters from "./routes/Book.routes";
 import authRouters from "./routes/Auth.routes";
 import userRouter from "./routes/User.routes";
+import passwordRouter from "./routes/ForgetPasword.routes";
 import { createRol } from "./libs/initialSeptup";
 
 import cors from "cors";
@@ -18,6 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use(bookRouters);
 app.use("/api/auth", authRouters);
+app.use("/api", passwordRouter);
 app.use(userRouter);
 
 export default app;

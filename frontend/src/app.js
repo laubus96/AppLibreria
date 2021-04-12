@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 /* componentes */
 import Home from "./component/Home";
 import Login from "./component/Login/Login";
+import ModalForgetPassword from "./component/Modal/ModalForgetPassword";
 /* estilos */
 import "./app.css";
 /* iconos */
@@ -51,6 +52,9 @@ const app = () => {
           <Switch>
             <Route path="/" exact component={Home}></Route>
             <Route path="/login" component={Login}></Route>
+            <Route
+              path="/modalForgetPassword"
+              component={ModalForgetPassword}></Route>
           </Switch>
         </main>
         <footer>

@@ -1,3 +1,8 @@
+html,
+body {
+  height: 100%;
+}
+
 .campos {
   padding: 1.5rem !important;
   font-size: 1rem !important;
@@ -39,4 +44,47 @@ span {
 }
 .preguntas a:hover {
   color: rgb(0, 0, 255);
+}
+
+/* modal*/
+.modalLogin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 400px;
+  height: 350px;
+  padding: 2rem;
+
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.36);
+}
+.modalTitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+
+  border-radius: 10px;
+}
+.contenidoModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
+  padding-top: 1rem;
+}
+.inputModal {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+}
+
+.buttonModal {
+  display: inline;
+  padding: 1rem !important;
 }

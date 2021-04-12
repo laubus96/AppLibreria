@@ -20,6 +20,7 @@ export const singUp = async (req, res) => {
   } else {
     const role = await Role.findOne({ name: "User" });
     newUser.roles = [role._id];
+    newUser.tokenEmail = "";
   }
   const newUserSave = await newUser.save();
   const token = jwt.sign({ id: newUserSave._id }, config.SECRET, {
