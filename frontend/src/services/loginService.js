@@ -9,3 +9,12 @@ export const loginService = (usuario) => {
     return res.data;
   });
 };
+
+export const registrarService = (usuario) => {
+  return axios.post(`${env}api/auth/singup`, usuario).then((res) => {
+    if (res.data) {
+      localStorage.setItem("token", JSON.stringify(res.data));
+    }
+    return res.data;
+  });
+};

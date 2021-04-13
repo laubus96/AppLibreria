@@ -1,21 +1,44 @@
 html,
 body {
+  color: #415161;
   height: 100%;
 }
-
+.subTitle {
+  padding-top: 0.5rem;
+  font-size: 0.7rem;
+  color: #415161;
+}
 .campos {
   padding: 1.5rem !important;
   font-size: 1rem !important;
   display: flex;
   align-items: center;
+  color: #415161;
 }
-
+.largoSpan {
+  width: 200px !important;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.largoInput {
+  width: 200px !important;
+  height: 40px !important;
+}
+.spanError {
+  font-size: 0.6rem;
+  color: red;
+}
+.spanCampoObli {
+  font-size: 0.6rem;
+}
 .largo {
   max-width: 400px;
 }
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 .title {
   font-size: 1.5rem;
+  color: #415161;
 }
 .form {
   display: flex;
@@ -37,10 +60,10 @@ span {
 .preguntas {
   padding: 1rem;
   font-size: 0.7rem;
-  color: gray;
+  color: #415161;
 }
 .preguntas a {
-  color: black;
+  color: #415161;
 }
 .preguntas a:hover {
   color: rgb(0, 0, 255);
@@ -51,7 +74,7 @@ span {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
   background-color: white;
   width: 400px;
   height: 350px;

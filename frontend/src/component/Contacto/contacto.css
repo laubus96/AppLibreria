@@ -1,0 +1,45 @@
+.contactos {
+  display: block;
+  text-align: start;
+  justify-content: start;
+  box-sizing: content-box;
+}
+.container {
+  font-family: "Poppins", sans-serif;
+  color: #415161;
+  padding: 3rem !important;
+}
+.cart {
+  display: block;
+  text-align: start;
+  justify-content: start;
+  font-family: "Poppins", sans-serif;
+  color: #415161;
+}
+.subTitle {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+p {
+  padding: 0.5rem;
+}
+.letraChica p {
+  font-size: 0.7 !important;
+}
+.paddins {
+  padding: 5rem !important;
+}
+.form {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 4rem;
+  font-family: "Roboto", sans-serif;
+}
+.campos {
+  padding: 1.5rem !important;
+  font-size: 1rem !important;
+  display: flex;
+  align-items: center;
+  color: #415161;
+}
