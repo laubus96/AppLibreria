@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import UserContext from "../../services/contextUser";
+import { Link, useHistory } from "react-router-dom";
 import { Modal, ModalBody, ModalTitle } from "react-bootstrap";
 import { validarPassword, validateEmail } from "../../helper";
 /* Servicios */
-import { loginService } from "../../services/loginService";
+
 import { forgetPasswordService } from "../../services/forgetPasswordService";
+
 /* Estilos */
 import "./login.css";
 /* materialUI */
@@ -19,6 +21,10 @@ import CloseIcon from "@material-ui/icons/Close";
 import SendIcon from "@material-ui/icons/Send";
 
 const Login = () => {
+  const history = useHistory();
+
+  const userContext = useContext(UserContext);
+
   // manejor de validaciones
   const [errorUsuarioVacio, setErrorUsuarioVacio] = useState("");
   const [errorPasswordVacio, setErrorPasswordVacio] = useState("");
@@ -31,7 +37,10 @@ const Login = () => {
   const [usuario, setUsuario] = useState({ userName: "", password: "" });
   const [emailForget, setEmailForget] = useState({ email: "" });
   const [showModal, setModal] = useState(false);
+
   // enviar datos para recuperar la contraseña
+
+  // modal
 
   const cerrarModal = () => {
     setModal(false);
@@ -62,7 +71,9 @@ const Login = () => {
       return;
     }
     if (errors) {
-      loginService(usuario);
+      userContext.loginService(usuario);
+
+      history.push("/");
     }
   };
   const handleInputChange = (e) => {
@@ -108,7 +119,7 @@ const Login = () => {
     }
     if (
       usuario.password !== "" &&
-      usuario.password !== !validarPassword(usuario.password)
+      usuario.password === !validarPassword(usuario.password)
     ) {
       setErrorPassword(
         "Ingrese una contraseña de largo entre 4 y 12 caracteres*"

@@ -2,12 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./app";
-
+import UserState from "./services/UserState";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App></App>
+    <UserState>
+      <App></App>
+    </UserState>
   </React.StrictMode>,
   document.getElementById("root")
 );

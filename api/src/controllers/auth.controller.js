@@ -2,6 +2,7 @@ import User from "../models/User";
 import jwt from "jsonwebtoken";
 import config from "../config";
 import Role from "../models/Rol";
+import Rol from "../models/Rol";
 
 export const singUp = async (req, res) => {
   const { firstName, lastName, userName, email, password, roles } = req.body;
@@ -22,11 +23,12 @@ export const singUp = async (req, res) => {
     newUser.roles = [role._id];
     newUser.tokenEmail = "";
   }
+  const rol = newUser.roles;
   const newUserSave = await newUser.save();
   const token = jwt.sign({ id: newUserSave._id }, config.SECRET, {
     expiresIn: 86400,
   });
-  res.json({ token });
+  res.json({ token, rol });
 };
 
 export const singIn = async (req, res) => {
@@ -40,6 +42,7 @@ export const singIn = async (req, res) => {
     req.body.password,
     userExist.password
   );
+  const nombreRol = await Rol.findById(userExist.roles);
 
   if (!passwordExist) {
     return res.status(401).json({ massage: "La contraseña no existe" });
@@ -51,5 +54,6 @@ export const singIn = async (req, res) => {
 
   return res.json({
     token: token,
+    rol: nombreRol,
   });
 };

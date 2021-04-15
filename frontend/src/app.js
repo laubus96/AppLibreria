@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-
+//import { tomarRol } from "./helper";
 /* componentes */
 import Home from "./component/Home";
 import Login from "./component/Login/Login";
@@ -8,10 +8,13 @@ import ModalForgetPassword from "./component/Modal/ModalForgetPassword";
 import Register from "./component/Register/Register.js";
 import Presentacion from "./component/Presentacion/Presentacios";
 import Contacto from "./component/Contacto/Contacto";
+import Cuenta from "./component/Cuenta/Cuenta";
+import Nav from "./component/Nav";
+
 /* estilos */
 import "./app.css";
 //import Input from "@material-ui/core/Input";
-import Button from "@material-ui/core/Button";
+//import Button from "@material-ui/core/Button";
 import "bootstrap/dist/css/bootstrap.css";
 /* iconos */
 import LocationOnIcon from "@material-ui/icons/LocationOn";
@@ -20,54 +23,11 @@ import PhoneAndroidIcon from "@material-ui/icons/PhoneAndroid";
 import EmailIcon from "@material-ui/icons/Email";
 
 const app = () => {
-  const token = JSON.parse(localStorage.getItem("token"));
-
   return (
     <BrowserRouter>
       <div className="grid-container">
         <header className="header">
-          <div className="logo">
-            <Link to="/">
-              <img className="img" src="/images/TuLogoSueño.png" alt=""></img>
-            </Link>
-          </div>
-          <div>
-            <form className="formApp">
-              <div className="inputApp">
-                <input
-                  type="text"
-                  placeholder="Buscar libro"
-                  className="form-control"></input>
-              </div>
-              <div className="boton">
-                <Button type="submit" variant="outlined" color="secondary">
-                  Buscar
-                </Button>
-              </div>
-            </form>
-          </div>
-          <div className="header-links">
-            <Link to="/">Inicio</Link>
-            <Link to="#">Libros</Link>
-            <Link to="/presentacion">Nosotros</Link>
-            <Link to="/contacto">Contacto</Link>
-            <Link to="#">Carrito</Link>
-            <Link to="/login">Iniciar Sesion</Link>
-            {token ? (
-              <div className="dropdown">
-                <Link href="#">Admin</Link>
-                <ul className="dropdown-content">
-                  <li>
-                    <Link to="/orders">Ventas</Link>
-                    <Link to="/products">Libros</Link>
-                    <Link to="/dashboard">Visualizaciones</Link>
-                  </li>
-                </ul>
-              </div>
-            ) : (
-              <div></div>
-            )}
-          </div>
+          <Nav></Nav>
         </header>
         <main>
           <Switch>
@@ -79,6 +39,7 @@ const app = () => {
             <Route path="/registro" component={Register}></Route>
             <Route path="/presentacion" component={Presentacion}></Route>
             <Route path="/contacto" component={Contacto}></Route>
+            <Route path="/micuenta" component={Cuenta}></Route>
           </Switch>
         </main>
         <footer>
