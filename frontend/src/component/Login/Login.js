@@ -1,11 +1,13 @@
-import React, { useState, useContext } from "react";
-import UserContext from "../../services/contextUser";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+// import UserContext from "../../services/contextUser";
 import { Link, useHistory } from "react-router-dom";
 import { Modal, ModalBody, ModalTitle } from "react-bootstrap";
 import { validarPassword, validateEmail } from "../../helper";
 /* Servicios */
 
 import { forgetPasswordService } from "../../services/forgetPasswordService";
+import { singin } from "../../actions/userActions";
 
 /* Estilos */
 import "./login.css";
@@ -22,8 +24,8 @@ import SendIcon from "@material-ui/icons/Send";
 
 const Login = () => {
   const history = useHistory();
-
-  const userContext = useContext(UserContext);
+  const dispach = useDispatch();
+  // const userContext = useContext(UserContext);
 
   // manejor de validaciones
   const [errorUsuarioVacio, setErrorUsuarioVacio] = useState("");
@@ -71,7 +73,7 @@ const Login = () => {
       return;
     }
     if (errors) {
-      userContext.loginService(usuario);
+      dispach(singin(usuario));
 
       history.push("/");
     }
@@ -136,7 +138,7 @@ const Login = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <section>
         {/* Modal */}
         <div>
@@ -203,8 +205,8 @@ const Login = () => {
         {/* Formulario para iniciar sesion */}
         <div className="form">
           <form onSubmit={submitHandle}>
-            <div className="title">
-              <h2>Iniciar Sesion</h2>
+            <div>
+              <h2 className="title">Iniciar Sesion</h2>
               <p className="subTitle">Llene los datos para iniciar sesion</p>
             </div>
 

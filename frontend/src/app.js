@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 //import { tomarRol } from "./helper";
 /* componentes */
-import Home from "./component/Home";
+import Home from "./component/Home/Home";
 import Login from "./component/Login/Login";
 import ModalForgetPassword from "./component/Modal/ModalForgetPassword";
 import Register from "./component/Register/Register.js";
@@ -10,6 +10,8 @@ import Presentacion from "./component/Presentacion/Presentacios";
 import Contacto from "./component/Contacto/Contacto";
 import Cuenta from "./component/Cuenta/Cuenta";
 import Nav from "./component/Nav";
+import ForgetPassword from "./component/ForgetPassword/ForgetPassword";
+import BooksSearchGenere from "./component/Books/BooksSearchGenere";
 
 /* estilos */
 import "./app.css";
@@ -40,6 +42,12 @@ const app = () => {
             <Route path="/presentacion" component={Presentacion}></Route>
             <Route path="/contacto" component={Contacto}></Route>
             <Route path="/micuenta" component={Cuenta}></Route>
+            <Route
+              path="/forgetPassword/:token"
+              component={ForgetPassword}></Route>
+            <Route
+              path="/booksSearchGenere"
+              component={BooksSearchGenere}></Route>
           </Switch>
         </main>
         <footer>

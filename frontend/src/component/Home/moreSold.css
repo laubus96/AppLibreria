@@ -1,0 +1,48 @@
+.imagenesSilderVendidos {
+  height: 300px;
+  width: 200px;
+}
+
+.sliderVendidos li {
+  width: 300px;
+  list-style: none;
+  padding: 10px;
+}
+
+/* slaider de mas vendidos*/
+
+.sliderVendidos {
+  padding: 0;
+  width: 1200px;
+  margin: auto;
+  overflow: hidden;
+}
+.sliderVendidos ul {
+  display: flex;
+  padding: 0;
+  width: 200%;
+  height: 600px;
+  animation: cambioVendidos 10s infinite alternate linear;
+  animation-direction: alternate;
+}
+@keyframes cambioVendidos {
+  0% {
+    margin-left: 0;
+  }
+  45% {
+    margin-left: 0;
+  }
+
+  55% {
+    margin-left: -100%;
+  }
+  100% {
+    margin-left: -100%;
+  }
+}
+.nomBook {
+  height: 60px;
+}
+.precioBook {
+  height: 60px;
+}

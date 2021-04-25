@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  color: #415161;
+}
+.form {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 4rem;
+  font-family: "Roboto", sans-serif;
+  border: black;
+}
+span {
+  padding-right: 1rem;
+}
+.spanCampoObli {
+  font-size: 0.5rem;
+}
+.paddins {
+  padding: 5rem !important;
+}
+html,
+body {
+  height: 100%;
+  color: #415161;
+}
+
+.preguntas {
+  padding: 1rem;
+  font-size: 0.7rem;
+  color: #415161;
+}
+.preguntas a {
+  color: #415161;
+}
+.preguntas a:hover {
+  color: rgb(0, 0, 255);
+}
+.campos {
+  padding: 1rem !important;
+  font-size: 1rem !important;
+  display: flex;
+  color: #415161;
+}
+.largoSpan {
+  width: 200px !important;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.largoInput {
+  width: 200px !important;
+  height: 40px !important;
+}
+
+.contactos {
+  display: block;
+  text-align: start;
+  justify-content: start;
+  box-sizing: content-box;
+}
+.container {
+  font-family: "Poppins", sans-serif;
+  color: #415161;
+  padding: 2rem !important;
+}
+.cart {
+  display: block;
+  text-align: start;
+  justify-content: start;
+  font-family: "Poppins", sans-serif;
+  color: #415161;
+}
+.subTitle {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+p {
+  padding: 0.5rem;
+}
+.letraChica p {
+  font-size: 0.7 !important;
+}
+
+.cart h1 {
+  padding-top: 5rem !important;
+}
+
+.paddinBoton {
+  display: flex;
+  padding: 1rem !important;
+  text-align: start;
+  justify-content: space-between;
+}

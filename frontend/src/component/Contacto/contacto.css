@@ -1,4 +1,4 @@
-.contactos {
+.contactoss {
   display: block;
   text-align: start;
   justify-content: start;
@@ -7,10 +7,11 @@
 .container {
   font-family: "Poppins", sans-serif;
   color: #415161;
-  padding: 3rem !important;
+  padding: 5rem !important;
+  max-width: 1400px !important;
 }
 .cart {
-  display: block;
+  display: flex;
   text-align: start;
   justify-content: start;
   font-family: "Poppins", sans-serif;
@@ -31,15 +32,15 @@ p {
 }
 .form {
   display: flex;
-  text-align: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: start;
   padding: 4rem;
   font-family: "Roboto", sans-serif;
 }
-.campos {
+.camposss {
   padding: 1.5rem !important;
   font-size: 1rem !important;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   color: #415161;
 }

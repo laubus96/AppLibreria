@@ -1,0 +1,2 @@
+export const BOOKS_MORE_SOLD = "BOOKS_MORE_SOLD";
+export const BOOKS_GET_GERDER = "BOOKS_GET_GERDER";

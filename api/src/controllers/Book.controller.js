@@ -4,6 +4,12 @@ export const getBooks = async (req, res) => {
   const books = await Book.find({ genero: req.params.genero });
   return res.json(books);
 };
+export const getBooksMasVendidos = async (req, res) => {
+  const books = await Book.find().sort({ cantVendida: -1 });
+  const diezBook = books.slice(0, 10);
+
+  return res.json(diezBook);
+};
 
 export const getBookId = async (req, res) => {
   const bookId = await Book.findById(req.params.id);

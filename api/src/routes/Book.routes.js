@@ -7,6 +7,11 @@ import * as bookCrl from "../controllers/Book.controller";
 
 router.get("/bookGenero/:genero", bookCrl.getBooks);
 
+router.get(
+  "/getMasVendidos",
+
+  bookCrl.getBooksMasVendidos
+);
 router.post(
   "/bookCreate",
   [crltAuth.verifyToken, crltAuth.isAdmin],

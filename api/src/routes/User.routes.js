@@ -5,7 +5,7 @@ import * as crltUser from "../controllers/User.controller";
 const router = Router();
 
 router.put(
-  "/user/update/:id",
+  "/user/update",
   [crltAuth.verifyToken, crltAuth.isAdmin],
   crltUser.updateUser
 );

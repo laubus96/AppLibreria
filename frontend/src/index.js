@@ -2,15 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./app";
-import UserState from "./services/UserState";
+//import UserState from "./services/UserState";
 import reportWebVitals from "./reportWebVitals";
+import { Provider } from "react-redux";
+import store from "./store";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <UserState>
-      <App></App>
-    </UserState>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <App></App>
+  </Provider>,
+
   document.getElementById("root")
 );
 

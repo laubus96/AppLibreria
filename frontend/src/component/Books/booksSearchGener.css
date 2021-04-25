@@ -1,0 +1,35 @@
+.inputSearchGenere {
+  border: gray;
+  display: inline;
+}
+.inputSearchGenere input {
+  width: 550px !important;
+  height: 36px !important;
+  margin-right: 2rem !important;
+}
+
+.formSearchGenere {
+  display: inline;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  max-width: 300px !important;
+  max-height: 600px !important;
+}
+
+.card-body img {
+  height: 387px !important;
+}
+.precioBooks {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.buttonn {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}

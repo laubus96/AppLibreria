@@ -1,36 +1,15 @@
-import React, { useContext } from "react";
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { getUserById } from "../actions/userActions";
 import "./nav.css";
 import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
-import UserContext from "../services/contextUser";
 
 const Nav = () => {
   console.log("dgdbgbz");
-  // const token = JSON.parse(localStorage.getItem("token"));
+  const dispatch = useDispatch();
+  const userLogin = useSelector((state) => state.singinUser);
 
-  // function tomarRol() {
-  //   const token = JSON.parse(localStorage.getItem("token"));
-  //   if (token !== null) {
-  //     const rol = token.rol;
-  //     const rolName = rol.name;
-  //     const vacio = "vacio";
-  //     if (rolName !== null) {
-  //       return rolName;
-  //     }
-  //     if (rolName === null) {
-  //       return vacio;
-  //     }
-  //   }
-  // }
-  // const rolName = tomarRol();
-  // const { token, rolName } = useRolToken();
-  // console.log(token);
-  // console.log(rolName);
-  const userContext = useContext(UserContext);
-  const token = userContext.token;
-  const rolName = userContext.rolName;
-  console.log(token);
-  console.log(rolName);
   return (
     <div className="header">
       <div className="logo">
@@ -47,7 +26,7 @@ const Nav = () => {
               className="form-control"></input>
           </div>
           <div className="boton">
-            <Button type="submit" variant="outlined" color="secondary">
+            <Button type="submit" variant="contained" color="secondary">
               Buscar
             </Button>
           </div>
@@ -55,17 +34,23 @@ const Nav = () => {
       </div>
       <div className="header-links">
         <Link to="/">Inicio</Link>
-        <Link to="#">Libros</Link>
+        <Link to="/booksSearchGenere">Libros</Link>
         <Link to="/presentacion">Nosotros</Link>
         <Link to="/contacto">Contacto</Link>
         <Link to="#">Carrito</Link>
-        {token ? (
-          <Link to="/micuenta">Mi cuenta</Link>
+        {userLogin.token !== "null" ? (
+          <Link
+            to="/micuenta"
+            onClick={(user) => {
+              dispatch(getUserById());
+            }}>
+            Mi cuenta
+          </Link>
         ) : (
           <Link to="/login">Iniciar Sesion</Link>
         )}
 
-        {token && rolName === "Admin" ? (
+        {userLogin.token !== "null" && userLogin.rolName === "Admin" ? (
           <div className="dropdown">
             <Link href="#">Admin</Link>
             <ul className="dropdown-content">

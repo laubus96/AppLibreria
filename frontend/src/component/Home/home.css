@@ -3,12 +3,12 @@
   height: 400px;
 }
 .slider {
-  width: 70%;
+  width: 1400px;
   margin: auto;
   overflow: hidden;
 }
 .imagenesSilder {
-  height: 400px;
+  height: 400px !important;
 }
 .slider ul {
   display: flex;
@@ -56,4 +56,25 @@
   100% {
     margin-left: -300%;
   }
+}
+.large {
+  padding-top: 3rem;
+  max-width: 1800px;
+}
+.container {
+  max-width: 2000px !important;
+}
+
+.titleVendidos {
+  display: block;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+.titleVendidos h1 {
+  padding-top: 4rem;
+  display: block;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
 }

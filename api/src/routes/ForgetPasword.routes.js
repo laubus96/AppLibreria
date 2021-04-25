@@ -1,13 +1,13 @@
 import { Router } from "express";
-
+import * as crltPasword from "../controllers/ForgetPassword.controller";
 import * as crltAuth from "../middleware/authJwt";
 
 const router = Router();
 
-import * as crltPasword from "../controllers/ForgetPassword.controller";
-
+router.put("/changePassword", crltPasword.changePassword);
+router.get("/resetVerify", crltPasword.verifyTokenForgetPassword);
 router.post(
-  "/forgotpassword",
+  "/forgot",
 
   crltPasword.forgetPassword
 );

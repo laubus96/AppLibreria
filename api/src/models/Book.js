@@ -36,6 +36,10 @@ const BookSchema = new Schema({
     required: true,
     trim: true,
   },
+  cantVendida: {
+    type: Number,
+    trim: true,
+  },
 });
 
 export default model("Book", BookSchema);

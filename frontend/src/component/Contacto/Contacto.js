@@ -12,7 +12,7 @@ import Button from "@material-ui/core/Button";
 
 const Contacto = () => {
   return (
-    <div className="contactos">
+    <div className="contactoss">
       <div className="container paddins">
         <div>
           <div className="row">
@@ -43,21 +43,21 @@ const Contacto = () => {
                   </h3>
                 </div>
                 <form>
-                  <div className="campos">
+                  <div className="camposss">
                     <span>
                       <EmailIcon></EmailIcon>
                     </span>
                     <span>Email</span>
                     <Input type="text"></Input>
                   </div>
-                  <div className="campos">
+                  <div className="camposss">
                     <span>
                       <SubjectIcon></SubjectIcon>
                     </span>
                     <span>Asunto</span>
                     <Input type="text"></Input>
                   </div>
-                  <div className="campos">
+                  <div className="camposss">
                     <span>
                       <ViewHeadlineIcon></ViewHeadlineIcon>
                     </span>

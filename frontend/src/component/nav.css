@@ -9,7 +9,8 @@
   text-decoration: none;
 }
 .inputApp {
-  width: 500px !important;
+  border: gray;
+  width: 550px !important;
 }
 .botonApp {
   border-radius: 10px;
